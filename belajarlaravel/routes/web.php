@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,10 @@ Route::get('/', function () {
 });
 
 
-Route::get('/index', [AdminController::class, 'index']);
+Route::get('/dashboard', [AdminController::class, 'dashboard']);
+
+Route::get('/produk', [ProdukController::class, 'produk']);
+Route::post('/produk/create', [ProdukController::class, 'create']);
+Route::get('/produk/{id}/delete', [ProdukController::class, 'delete']);
+Route::get('/produk/edit/{id}', [ProdukController::class, 'edit']);
+Route::post('/produk/update', [ProdukController::class, 'update']);
