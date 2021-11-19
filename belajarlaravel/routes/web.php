@@ -16,12 +16,12 @@ use App\Http\Controllers\ProdukController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('dashboard');
+// });
 
 
-Route::get('/dashboard', [AdminController::class, 'dashboard']);
+Route::get('/', [AdminController::class, 'dashboard']);
 
 Route::get('/produk', [ProdukController::class, 'produk']);
 Route::post('/produk/create', [ProdukController::class, 'create']);

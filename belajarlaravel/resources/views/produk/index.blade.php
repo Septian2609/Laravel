@@ -131,7 +131,7 @@
            <div class="modal-body">
               <form action="/produk/update" method="POST" enctype="multipart/form-data">
             {{csrf_field()}}
-            <input type="hidden" name="id" id="id">
+            <input type="hidden" name="id" id="id" value="">
             <div class="form-group">
               <label for="exampleInputEmail1">Nama Produk</label>
               <input name="nama_produk" type="text" class="form-control" id="nama_produk" placeholder="Nama Produk" required="">
